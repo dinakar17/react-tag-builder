@@ -1,0 +1,64 @@
+{
+  "name": "react-tag-builder",
+  "version": "1.0.0",
+  "description": "An easy-to-integrate, customizable React component that transforms user input into a series of tags. Supports both default and user-provided tags, offers customizable styles for input field and tags, and provides inbuilt handlers for user interactions. Ideal for any application that requires user-generated tags or keywords.",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+"
+  },
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
+    "prettier": "prettier --write \"{src,tests,example/src}/**/*.{js,ts,jsx,tsx}\"",
+    "build": "yarn build:esm && yarn build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run prettier && npm run lint"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "react-tag",
+    "react-tag-field",
+    "tag",
+    "tag-field",
+    "tag-input",
+    "tagging",
+    "tags"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@types/babel__template": "^7.4.1",
+    "@types/jest": "^29.5.1",
+    "@types/react": "^18.2.6",
+    "@types/testing-library__jest-dom": "^5.14.5",
+    "@typescript-eslint/eslint-plugin": "^5.59.5",
+    "@typescript-eslint/parser": "^5.59.5",
+    "eslint": "^8.40.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "jest": "^29.5.0",
+    "jest-canvas-mock": "^2.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "prettier": "^2.8.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "ts-jest": "^29.1.0",
+    "tslib": "^2.5.0",
+    "typescript": "^5.0.4"
+  }
+}
